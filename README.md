@@ -53,4 +53,10 @@ requirements:
     ```
     Of course, the `jumps` could start even a bit more to the right, or preceded by an arrow etc.
 
-What if your favorite editor does not match those requirements? arrival of a new browser "Will it run under DOS?"
+What if your favorite editor does not match those requirements? On the one hand, it looks as absurd to me as saying on the
+arrival of a new webbrowser: "Will it run under DOS [with a CGA card]?". On the other hand, writing in Almost English with
+`ed(1)` is better than doing the same in an old-fashioned unmaintainable language. So, **support for the "oldie" editors
+must be implemented but in a way that does not hurt the the users that go without them** , which means that (1) the main
+notation for Almost English programs shall not adhere to the legacy text model, and (2) that the presence of legacy model
+support shall not lead to speed penalties, more memory consumption etc. in the compiler when it operates on non-legacy
+source files. 
