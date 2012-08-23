@@ -6,6 +6,9 @@ be done here. I opened the repository only for saving the idea of having such a 
 Almost English system, and for realizing the whole thing independently of Almost English since I believe it will also
 be useful outside of that programming language.
 
+Introduction
+------------
+
 What is it all about? — Well, Helium in general wants to do many things in an innovative and aesthetically pleasing way
 _(don't read Web-technology hype, 'smart'phones, bloatware, patronizing skilled users, being proud of "shiny new stuff"
 invented around 1990)_ while still being "small and simple" and fast even on "old" or small/power-saving computers. The
@@ -56,7 +59,19 @@ requirements:
 What if your favorite editor does not match those requirements? On the one hand, it looks as absurd to me as saying on the
 arrival of a new webbrowser: "Will it run under DOS [with a CGA card]?". On the other hand, writing in Almost English with
 `ed(1)` is better than doing the same in an old-fashioned unmaintainable language. So, **support for the "oldie" editors
-must be implemented but in a way that does not hurt the the users that go without them** , which means that (1) the main
+must be implemented but in a way that does not hurt the the users that go without them** . This means that (1) the main
 notation for Almost English programs shall not adhere to the legacy text model, and (2) that the presence of legacy model
 support shall not lead to speed penalties, more memory consumption etc. in the compiler when it operates on non-legacy
 source files. 
+
+
+Implementation
+--------------
+
+Legacy text-model support is implemented by **a separate program, called the _Editor Nanny_** because its task is to look
+after non-compliant editors, i.e. take their output and put it into a form usable by the Almost English compiler, and
+translate standard Almost English notation (from IDE users) back to something that a legacy editor is familiar with.
+
+The program will be written in C, because that's enough for simple non-interactive filter programs. Additionally, the
+project is designed to be used outside of the Almost English context (wherever conversion from/to Elastic Tabstops is
+required), so it should be as portable as possible.
