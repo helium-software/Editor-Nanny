@@ -30,7 +30,7 @@ particular IDE. So, the design will be carried out such that any editing program
 requirements:
 
  *  **Elastic tabstops**, as proposed by [Nick Gravgaard](http://nickgravgaard.com/elastictabstops/). There exists a shared
-    library implementation, which is used in plugins for e.g. Gedit and Vim. When you have read the above-mentioned page,
+    library implementation, which is used in plugins for e.g. Gedit and others. When you have read the above-mentioned page,
     you probably will agree that this is a much smarter way of interpreting the ASCII Tab character than going to the
     next multiple of N columns — even mechanical typewriters were better than that.
 
