@@ -34,15 +34,16 @@ requirements:
     you probably will agree that this is a much smarter way of interpreting the ASCII Tab character than going to the
     next multiple of N columns — even mechanical typewriters were better than that.
 
- *  **Word-wrapping** of long lines, such that the continuation of a line starts at the same distance to the left as the
-    first line was indented. While many GUI-based editors allow word-wrapping, I don't know of any editor that implements
-    the second part of this requirement. So, the following example illustrates the wanted behavior:
+    __Implemented in:__ Gedit (plugin)
 
+
+ *  **Word-wrapping** of long lines, such that the continuation of a line starts at the same distance to the left as the
+    first line was indented. The following example illustrates the wanted behavior:
     ```
     Next line is indented
          This is a rather long line of text: The quick brown fox jumps over the lazy dog
     ```
-    is shown in current text editors as:
+    is shown in most text editors as:
     ```
     Next line is indented
          This is a rather long line of text: The quick brown fox
@@ -55,6 +56,8 @@ requirements:
          jumps over the lazy dog
     ```
     Of course, the `jumps` could start even a bit more to the right, or preceded by an arrow etc.
+
+    __Implemented in:__ Geany
 
 What if your favorite editor does not match those requirements? On the one hand, it looks as absurd to me as saying on the
 arrival of a new webbrowser: "Will it run under DOS [with a CGA card]?". On the other hand, writing in Almost English with
